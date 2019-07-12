@@ -4,7 +4,7 @@ import "fmt"
 
 func notaParaConceito(n float64) string {
 	if n >= 9 && n <= 10 {
-		return "A"
+		return "A"			
 	} else if n >= 8 && n < 9 {
 		return "B"
 	} else if n >= 5 && n < 8 {
