@@ -23,9 +23,9 @@ func encaminhar(origem <-chan string, destino chan string) {
 }
 
 // multiplexar - misturar (mensagens) num canal
-func juntar(estrada1, entrada2 <-chan string) <-chan string {
+func juntar(entrada1, entrada2 <-chan string) <-chan string {
 	c := make(chan string)
-	go encaminhar(entrada2, c)
+	go encaminhar(entrada1, c)
 	go encaminhar(entrada2, c)
 	return c
 }
